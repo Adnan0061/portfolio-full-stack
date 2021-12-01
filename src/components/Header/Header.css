@@ -1,0 +1,17 @@
+/* .shadow {
+    box-shadow: 0 2px 92px 0 rgba(0,0,0,0.13);
+    background-color: white;
+}
+
+.header{
+    margin-top: 20px;
+} */
+
+/* .MuiToolbar-root .MuiToolbar-gutters .MuiToolbar-regular .css-1hhv4s6-MuiToolbar-root{
+ padding: 0!important;
+} */
+
+
+.MuiTab-root.MuiTab-textColorPrimary.Mui-selected.css-1jn1t8-MuiButtonBase-root-MuiTab-root{
+    color: #FFC500;
+}

@@ -1,24 +1,33 @@
-import logo from './logo.svg';
-import './App.css';
+import { Container, Grid } from '@mui/material';
+import Header from './components/Header/Header'
+import Footer from './components/Footer/Footer'
+import Profile from './components/Profile/Profile';
+import Box from '@mui/material/Box';
+// import { minHeight, shadows } from '@mui/system';
+// import { Routes, Route, Link } from "react-router-dom";
+// import './App.css';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Box>
+    <Container>
+    <Box>
+      <Grid container spacing={{ xs: 2 }}>
+        <Grid item sx={{mt: '25px',}} xs={12} sm={5} md={4} lg={3}>
+          <Profile/>
+        </Grid>
+
+        <Grid item xs sx={{mt: '25px'}}>
+          <Box sx={{borderRadius: '6px', gap:3 }}>
+            <Header />
+            <br/>
+            <Footer />
+          </Box>
+        </Grid>
+      </Grid>
+    </Box>
+    </Container>
+    </Box>
   );
 }
 

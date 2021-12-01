@@ -1,0 +1,8 @@
+
+.MuiTimelineItem-missingOppositeContent::before {
+    display: none;
+}
+
+.timeline .MuiTimelineConnector-root {
+    background-color: #eee;
+}
