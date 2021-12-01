@@ -1,12 +1,13 @@
-import * as React from 'react';
+import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import Tabs from '@mui/material/Tabs';
 import Tab from '@mui/material/Tab';
 import Typography from '@mui/material/Typography';
 import Box from '@mui/material/Box';
 import resumeData from '../../utils/resumeData';
-import { Button, Card, CardActionArea, CardActions, CardContent, CardMedia, Grid } from '@mui/material';
+import { Button, Card, CardActionArea, CardActions, CardContent, CardMedia, Dialog, DialogActions, DialogContent, DialogTitle, Grid } from '@mui/material';
 import ProjectDialague from './ProjectDialague';
+import SimpleDialogDemo from './ProjectDialague';
 // import ProjectDialague from './ProjectDialague'
 
 function TabPanel(props) {
@@ -22,7 +23,7 @@ function TabPanel(props) {
     >
       {value === index && (
         <Box sx={{ p: 3 }}>
-          <Typography>{children}</Typography>
+          <Box>{children}</Box>
         </Box>
       )}
     </div>
@@ -43,13 +44,36 @@ function a11yProps(index) {
 }
 
 const PortfolioPanel = () => {
-  const [value, setValue] = React.useState(0);
+  const [value, setValue] = useState(0);
+  const [projectDialague, setProjectDialague] = useState(false);
+  // const [open, setOpen] = React.useState(false);
+
+  console.log(projectDialague)
 
   const handleChange = (event, newValue) => {
     setValue(newValue);
   };
 
-  const projects = resumeData.projects;
+    const ProjectDialague = () =>  (
+      <Dialog 
+      open={projectDialague} 
+      onClose={()=> setProjectDialague(false)}
+      aria-labelledby="alert-dialog-title"
+      aria-describedby="alert-dialog-description"
+      >
+          <DialogTitle onClose={()=> setProjectDialague(false)}>{projectDialague.title}</DialogTitle>
+        <DialogContent>
+          <img src={projectDialague.image} alt="" />
+          Description
+        </DialogContent>
+        <DialogActions>
+          All actions
+        </DialogActions>
+      </Dialog>
+      )
+      ProjectDialague()
+  // },[projectDialague])
+
 
   const tabsSet = [...new Set(resumeData.projects.map(item => item.tag))]
 
@@ -70,32 +94,30 @@ const PortfolioPanel = () => {
 
       <TabPanel value={value} index={0}>
         <Grid container spacing={{ xs: 2, md: 3 }} columns={{ xs: 4, sm: 8, md: 12 }}>
-          {projects.map(project => {
+          {resumeData.projects.map((project) =>  (
 
-            return (
               <Grid key={project.title} item xs={12} sm={6} md={4}>
-                {/* <ProjectDialague> */}
                   <Card>
-                    <CardActionArea>
+                  {/* <Card onClick={handleOpen }> */}
+                    <CardActionArea  onClick={()=>setProjectDialague(project)}>
                     <CardMedia
                       component="img"
                       alt="green iguana"
                       height="140"
-                      image="https://raw.githubusercontent.com/Adnan0061/Helmetrix-client-side/main/src/images/iqbal-2nIBkSxJQ0E-unsplash2.jpg"
+                      align='top'
+                      image={project.image}
                     />
                     <CardContent>
-                      <Typography gutterBottom variant="h5" component="div">
+                      <Typography sx={{fontSize: '17px',}} gutterBottom variant="h5" component="div">
                         {project.title}
                       </Typography>
-                      <Typography variant="body2" color="text.secondary">
+                      <Typography sx={{fontSize: '14px',}} variant="body2" color="text.secondary">
                         {project.shortdesc}
                       </Typography>
                     </CardContent>
                     </CardActionArea>
                   </Card>
-                {/* </ProjectDialague> */}
               </Grid>)
-          }
           )}
         </Grid>
       </TabPanel>
@@ -104,12 +126,11 @@ const PortfolioPanel = () => {
         return (
           <TabPanel value={value} index={tabsSet.indexOf(tag) + 1}>
             <Grid container spacing={{ xs: 2, md: 3 }} columns={{ xs: 4, sm: 8, md: 12 }}>
-              {projects.map(project => {
+              {resumeData.projects.map(project => {
                 return (
                   <>
                   {project.tag == tag &&
                     <Grid key={project.tag} item xs={12} sm={6} md={4}>
-                      <ProjectDialague>
                         <Card sx={{ maxWidth: 345 }}>
                           <CardMedia
                             component="img"
@@ -127,7 +148,6 @@ const PortfolioPanel = () => {
                             </Typography>
                           </CardContent>
                         </Card>
-                      </ProjectDialague>
                     </Grid>
                   }
                   </>
@@ -138,6 +158,7 @@ const PortfolioPanel = () => {
         )
       }
       )}
+
 
       {/* <TabPanel value={value} index={1}>
         Item Two

@@ -150,7 +150,7 @@ export default {
     projects: [
         {
             tag: 'Full Stack (MERN)',
-            image: '',
+            image: 'https://raw.githubusercontent.com/Adnan0061/portfolio-full-stack/main/src/assests/images/projects/helmetrix/screencapture-helmetrix-netlify-app-2021-12-02-00_45_43.png',
             title: 'Hrlmetrix  (full stack)',
             shortdesc: [
                 "A niche helmet selling site that has a dashboard", 
