@@ -48,37 +48,35 @@ const PortfolioPanel = () => {
   const [projectDialague, setProjectDialague] = useState(false);
   // const [open, setOpen] = React.useState(false);
 
-  console.log(projectDialague)
-
   const handleChange = (event, newValue) => {
     setValue(newValue);
   };
 
-    const ProjectDialague = () =>  (
-      <Dialog 
-      open={projectDialague} 
-      onClose={()=> setProjectDialague(false)}
+  const ProjectDialague = (open) => (
+    <Dialog
+      maxWidth='xl'
+      open={projectDialague}
+      onClose={() => setProjectDialague(false)}
       aria-labelledby="alert-dialog-title"
       aria-describedby="alert-dialog-description"
-      >
-          <DialogTitle onClose={()=> setProjectDialague(false)}>{projectDialague.title}</DialogTitle>
-        <DialogContent>
-          <img src={projectDialague.image} alt="" />
-          Description
-        </DialogContent>
-        <DialogActions>
-          All actions
-        </DialogActions>
-      </Dialog>
-      )
-      ProjectDialague()
-  // },[projectDialague])
+    >
+      <DialogTitle onClose={() => setProjectDialague(false)}>{projectDialague.title}</DialogTitle>
+      <DialogContent>
+        <img style={{ width: '100%', }} src={projectDialague.image} alt="" />
+        <h2>Description</h2>
+      </DialogContent>
+      <DialogActions>
+        All actions
+      </DialogActions>
+    </Dialog>
+  )
 
 
   const tabsSet = [...new Set(resumeData.projects.map(item => item.tag))]
 
   return (
     <Box sx={{ width: '100%' }}>
+
       <Box sx={{ borderBottom: 1, borderColor: 'divider' }}>
         <Tabs value={value} indicatorColor='none' onChange={handleChange} aria-label="basic tabs example">
 
@@ -94,32 +92,34 @@ const PortfolioPanel = () => {
 
       <TabPanel value={value} index={0}>
         <Grid container spacing={{ xs: 2, md: 3 }} columns={{ xs: 4, sm: 8, md: 12 }}>
-          {resumeData.projects.map((project) =>  (
+          {resumeData.projects.map((project) => (
 
-              <Grid key={project.title} item xs={12} sm={6} md={4}>
-                  <Card>
-                  {/* <Card onClick={handleOpen }> */}
-                    <CardActionArea  onClick={()=>setProjectDialague(project)}>
-                    <CardMedia
-                      component="img"
-                      alt="green iguana"
-                      height="140"
-                      align='top'
-                      image={project.image}
-                    />
-                    <CardContent>
-                      <Typography sx={{fontSize: '17px',}} gutterBottom variant="h5" component="div">
-                        {project.title}
-                      </Typography>
-                      <Typography sx={{fontSize: '14px',}} variant="body2" color="text.secondary">
-                        {project.shortdesc}
-                      </Typography>
-                    </CardContent>
-                    </CardActionArea>
-                  </Card>
-              </Grid>)
+            <Grid key={project.title} item xs={12} sm={6} md={4}>
+              <Card onClick={() => setProjectDialague(project)}>
+                {/* <Card onClick={hamdleOnClick}> */}
+                <CardActionArea>
+                  <CardMedia
+                    component="img"
+                    alt="green iguana"
+                    height="140"
+                    align='top'
+                    image={project.image}
+                  />
+                  <CardContent>
+                    <Typography sx={{ fontSize: '17px', }} gutterBottom variant="h5" component="div">
+                      {project.title}
+                    </Typography>
+                    <Typography sx={{ fontSize: '14px', }} variant="body2" color="text.secondary">
+                      {project.shortdesc}
+                    </Typography>
+                  </CardContent>
+                </CardActionArea>
+              </Card>
+            </Grid>)
           )}
         </Grid>
+
+        {projectDialague && <ProjectDialague />}
       </TabPanel>
 
       {tabsSet.map(tag => {
@@ -129,31 +129,35 @@ const PortfolioPanel = () => {
               {resumeData.projects.map(project => {
                 return (
                   <>
-                  {project.tag == tag &&
-                    <Grid key={project.tag} item xs={12} sm={6} md={4}>
-                        <Card sx={{ maxWidth: 345 }}>
-                          <CardMedia
-                            component="img"
-                            alt="green iguana"
-                            height="140"
-                            // image={`../../assests/images/projects/${project.image}`}
-                            image="../../assests/images/mine.JPG"
-                          />
-                          <CardContent>
-                            <Typography gutterBottom variant="h5" component="div">
-                              {project.title}
-                            </Typography>
-                            <Typography variant="body2" color="text.secondary">
-                              {project.shortdesc}
-                            </Typography>
-                          </CardContent>
+                    {project.tag == tag &&
+                      <Grid key={project.title} item xs={12} sm={6} md={4}>
+                        <Card onClick={() => setProjectDialague(project)}>
+                          {/* <Card onClick={hamdleOnClick}> */}
+                          <CardActionArea>
+                            <CardMedia
+                              component="img"
+                              alt="green iguana"
+                              height="140"
+                              align='top'
+                              image={project.image}
+                            />
+                            <CardContent>
+                              <Typography sx={{ fontSize: '17px', }} gutterBottom variant="h5" component="div">
+                                {project.title}
+                              </Typography>
+                              <Typography sx={{ fontSize: '14px', }} variant="body2" color="text.secondary">
+                                {project.shortdesc}
+                              </Typography>
+                            </CardContent>
+                          </CardActionArea>
                         </Card>
-                    </Grid>
-                  }
+                      </Grid>
+                    }
                   </>
                 )
               })}
             </Grid>
+            {projectDialague && <ProjectDialague />}
           </TabPanel>
         )
       }
