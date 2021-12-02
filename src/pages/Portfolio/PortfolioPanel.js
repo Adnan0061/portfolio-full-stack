@@ -5,9 +5,10 @@ import Tab from '@mui/material/Tab';
 import Typography from '@mui/material/Typography';
 import Box from '@mui/material/Box';
 import resumeData from '../../utils/resumeData';
-import { Button, Card, CardActionArea, CardActions, CardContent, CardMedia, Dialog, DialogActions, DialogContent, DialogTitle, Grid } from '@mui/material';
+import { Button, Card, CardActionArea, CardActions, CardContent, CardMedia, Dialog, DialogActions, DialogContent, DialogTitle, Grid, Link } from '@mui/material';
 import ProjectDialague from './ProjectDialague';
 import SimpleDialogDemo from './ProjectDialague';
+import CustomButton from '../../components/Button/CustomButton';
 // import ProjectDialague from './ProjectDialague'
 
 function TabPanel(props) {
@@ -54,16 +55,34 @@ const PortfolioPanel = () => {
 
   const ProjectDialague = (open) => (
     <Dialog
+      sx={{height: '100%'}}
       maxWidth='xl'
       open={projectDialague}
       onClose={() => setProjectDialague(false)}
       aria-labelledby="alert-dialog-title"
       aria-describedby="alert-dialog-description"
     >
-      <DialogTitle onClose={() => setProjectDialague(false)}>{projectDialague.title}</DialogTitle>
+      <Grid container rowSpacing={1} columnSpacing={{ xs: 1, sm: 2, md: 3 }}>
+        <Grid item xs={12} sm={12} md={8}>
+          <DialogTitle onClose={() => setProjectDialague(false)}>{projectDialague.title} {projectDialague.caption}</DialogTitle>
+          {
+            projectDialague.links.map(link => <Link sx={{ ml: 3, lineHeight: '26px', fontSize: '17px', textDecoration: 'none' }} href={link.link}>{link.text}</Link>)
+          }
+        </Grid>
+
+      </Grid>
       <DialogContent>
-        <img style={{ width: '100%', }} src={projectDialague.image} alt="" />
-        <h2>Description</h2>
+        <Box sx={{ height: '25%' }}>
+          <Typography>
+            Description Details:
+          </Typography>
+          <ul>
+            {projectDialague.githubdesc.map(list => <li key={list}>{list}</li>)}
+          </ul>
+        </Box>
+        <Box sx={{ height: '75%' }}>
+          <img style={{ width: '100%', overflow: 'scroll' }} src={projectDialague.image[1]} alt="" />
+        </Box>
       </DialogContent>
       <DialogActions>
         All actions
@@ -80,11 +99,11 @@ const PortfolioPanel = () => {
       <Box sx={{ borderBottom: 1, borderColor: 'divider' }}>
         <Tabs value={value} indicatorColor='none' onChange={handleChange} aria-label="basic tabs example">
 
-          <Tab sx={{ fontSize: '14px', fontWeight: '600' }} label="All" {...a11yProps(0)} />
+          <Tab sx={{ fontSize: '14px', fontWeight: '500' }} label="All" {...a11yProps(0)} />
           {
             tabsSet.map(tag => {
               return (
-                <Tab key={tag} sx={{ fontSize: '14px', fontWeight: '600' }} label={tag} {...a11yProps(tabsSet.indexOf(tag) + 1)} />
+                <Tab key={tag} sx={{ fontSize: '14px', fontWeight: '500' }} label={tag} {...a11yProps(tabsSet.indexOf(tag) + 1)} />
               )
             })}
         </Tabs>
@@ -95,7 +114,7 @@ const PortfolioPanel = () => {
           {resumeData.projects.map((project) => (
 
             <Grid key={project.title} item xs={12} sm={6} md={4}>
-              <Card onClick={() => setProjectDialague(project)}>
+              <Card sx={{ boxShadow: '0 2px 92px 0 rgba(0,0,0,0.13)', borderRadius: '6px' }} onClick={() => setProjectDialague(project)}>
                 {/* <Card onClick={hamdleOnClick}> */}
                 <CardActionArea>
                   <CardMedia
@@ -103,9 +122,9 @@ const PortfolioPanel = () => {
                     alt="green iguana"
                     height="140"
                     align='top'
-                    image={project.image}
+                    image={project.image[0]}
                   />
-                  <CardContent>
+                  <CardContent >
                     <Typography sx={{ fontSize: '17px', }} gutterBottom variant="h5" component="div">
                       {project.title}
                     </Typography>
@@ -131,7 +150,7 @@ const PortfolioPanel = () => {
                   <>
                     {project.tag == tag &&
                       <Grid key={project.title} item xs={12} sm={6} md={4}>
-                        <Card onClick={() => setProjectDialague(project)}>
+                        <Card sx={{ boxShadow: '0 2px 92px 0 rgba(0,0,0,0.13)', borderRadius: '6px' }} onClick={() => setProjectDialague(project)}>
                           {/* <Card onClick={hamdleOnClick}> */}
                           <CardActionArea>
                             <CardMedia
@@ -139,9 +158,9 @@ const PortfolioPanel = () => {
                               alt="green iguana"
                               height="140"
                               align='top'
-                              image={project.image}
+                              image={project.image[0]}
                             />
-                            <CardContent>
+                            <CardContent >
                               <Typography sx={{ fontSize: '17px', }} gutterBottom variant="h5" component="div">
                                 {project.title}
                               </Typography>

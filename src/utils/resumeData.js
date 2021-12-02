@@ -1,4 +1,4 @@
-import { GitHub, LinkedIn } from "@mui/icons-material";
+import { GitHub, LinkedIn, Map } from "@mui/icons-material";
 
 export default {
     name: 'Adnan Ahmed',
@@ -150,12 +150,13 @@ export default {
     projects: [
         {
             tag: 'Full Stack (MERN)',
-            image: 'https://raw.githubusercontent.com/Adnan0061/portfolio-full-stack/main/src/assests/images/projects/helmetrix/screencapture-helmetrix-netlify-app-2021-12-02-00_45_43.png',
+            image: ['https://raw.githubusercontent.com/Adnan0061/portfolio-full-stack/main/src/assests/images/projects/helmetrix/1.png', 'https://github.com/Adnan0061/portfolio-full-stack/blob/main/src/assests/images/projects/helmetrix/2.png?raw=true'],
             title: 'Hrlmetrix  (full stack)',
+            caption: '',
             shortdesc: [
                 "A niche helmet selling site that has a dashboard", 
-                "Admin and user has different options access on dashboard",
-                "Can place manage order, review, and user in the from the dashboard",
+                // "Admin and user has different options access on dashboard",
+                // "Can place manage order, review, and user in the from the dashboard",
             ],
             githubdesc: [
                 'It has some private routes which needs login to access',
@@ -168,42 +169,55 @@ export default {
                 'A demo admin is created with email: admin@admin.com, pass:123456',
             ],
             links: [
-                {link: '', icon: ''},
-                {link: '', icon: ''},
-                {link: '', icon: ''},
+                {link: 'https://helmetrix.netlify.app/', text: 'Live Site',},
+                {link: 'https://github.com/Adnan0061/Helmetrix-client-side', text: 'Client Side',},
+                {link: 'https://github.com/Adnan0061/Helmetrix-client-side', text: 'Server Side',},
             ]
         },
         {
             tag: 'Full Stack (MERN)',
-            image: '../assests/images/projects/helmetrix/screencapture-helmetrix-netlify-app-2021-12-02-00_45_43.png',
-            title: 'project 3',
-            desc: 'desc 3',
+            image: ['https://raw.githubusercontent.com/Adnan0061/portfolio-full-stack/main/src/assests/images/projects/Happy%20Tours/1.png', 'https://raw.githubusercontent.com/Adnan0061/portfolio-full-stack/main/src/assests/images/projects/Happy%20Tours/2.png'],
+            title: 'Happy Tours',
+            caption: 'Tour package site',
+            shortdesc: [
+                "A niche helmet selling site that has a dashboard. Admin and user has different options", 
+                // "Admin and user has different options access on dashboard",
+                // "Can place manage order, review, and user in the from the dashboard",
+            ],
+            githubdesc: [
+                'This projects frontend is created with React and Bootstrap',
+                'Backend is created with Node and express with MongoDb as database. Also used firebase for authentication',
+                'Here 6 ready made tours are but you can add more tours and that will be added in the home page',
+                'From tour details page you can book your tour with default status pending and from my order you will get your bookings',
+                'in manage all order page you will see all orders. you can delete orders as well as update orders. from update orders you can update status also.',
+            ],
             links: [
-                {link: '', icon: ''},
-                {link: '', icon: ''},
-                {link: '', icon: ''},
+                {link: 'https://tour-site-mern.netlify.app/', text: 'Live Site',},
+                {link: 'https://github.com/Adnan0061/tour-site-mern-frontend', text: 'Client Side',},
+                {link: 'https://github.com/Adnan0061/tour-site-server-new', text: 'Server Side',},
             ]
         },
         {
-            tag: 'Full Stack (MERN)',
-            image: '',
-            title: 'project 4',
-            desc: 'desc 4',
+            tag: 'React',
+            image: ['https://raw.githubusercontent.com/Adnan0061/portfolio-full-stack/main/src/assests/images/projects/eHospital/1.png', 'https://raw.githubusercontent.com/Adnan0061/portfolio-full-stack/main/src/assests/images/projects/eHospital/2.png'],
+            title: 'eHealth',
+            caption: 'online healthcare site',
+            shortdesc: [
+                "A online healthcare website where people can book appointment to doctor for both online and physical", 
+                // "Admin and user has different options access on dashboard",
+                // "Can place manage order, review, and user in the from the dashboard",
+            ],
+            githubdesc: [
+                'A healthcare website that merges doctors ans patients.',
+                'Patient and doctors can have their session both online and offline',
+                'It also has medicine home delivery option',
+                '24/7 support',
+                'Insurance option for under privileged# eHealth',
+            ],
             links: [
-                {link: '', icon: ''},
-                {link: '', icon: ''},
-                {link: '', icon: ''},
-            ]
-        },
-        {
-            tag: 'Valila Js',
-            image: '',
-            title: 'project 5',
-            desc: 'desc 5',
-            links: [
-                {link: '', icon: ''},
-                {link: '', icon: ''},
-                {link: '', icon: ''},
+                {link: 'https://ehealth-online-healthcare.netlify.app/', text: 'Live Site',},
+                {link: 'https://github.com/Adnan0061/eHealth', text: 'Client Side',},
+                
             ]
         },
     ]
