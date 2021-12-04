@@ -239,7 +239,7 @@ export default {
         },
         {
             tag: 'Vanila Js',
-            image: ['https://raw.githubusercontent.com/Adnan0061/portfolio-full-stack/main/src/assests/images/projects/eHospital/1.png', 'https://raw.githubusercontent.com/Adnan0061/portfolio-full-stack/main/src/assests/images/projects/eHospital/2.png'],
+            image: ['https://raw.githubusercontent.com/Adnan0061/portfolio-full-stack/main/src/assests/images/projects/Country%20details/Document.png', 'https://raw.githubusercontent.com/Adnan0061/portfolio-full-stack/main/src/assests/images/projects/Country%20details/Document.png'],
             title: 'Country Details',
             caption: '',
             shortdesc: [
