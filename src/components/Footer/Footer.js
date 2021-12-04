@@ -17,7 +17,7 @@ const Footer = () => {
 
           <Grid item xs={6} sx={{textAlign: 'right', p:0, display: 'flex', flexDirection: 'column', alignItems: 'flex-end',}}>
             <Typography sx={{color: 'lightgray'}}> Developed by <span style={{color: '#FFC500'}}>Adnan Ahmed</span></Typography>
-            <Typography sx={{color: 'lightgray'}}> Design Idea courtesy <span style={{color: '#FFC500'}}>Travonline</span></Typography>
+            <Typography sx={{color: 'lightgray'}}> Design Idea courtesy <span style={{color: '#FFC500'}}><a style={{textDecoration: 'none', color: 'inherit'}} href="https://themeforest.net/user/tavonline">Travonline</a></span></Typography>
           </Grid>
 
       </Grid>

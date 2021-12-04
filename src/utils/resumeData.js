@@ -1,4 +1,4 @@
-import { GitHub, LinkedIn, Map } from "@mui/icons-material";
+import { GitHub, Language, LinkedIn, Map } from "@mui/icons-material";
 
 export default {
     name: 'Adnan Ahmed',
@@ -158,7 +158,7 @@ export default {
                 // "Admin and user has different options access on dashboard",
                 // "Can place manage order, review, and user in the from the dashboard",
             ],
-            githubdesc: [
+            longdesc: [
                 'It has some private routes which needs login to access',
                 'You have Login to view product details and order',
                 'This site has a dashboard which also has different feature for admin and non admin',
@@ -169,9 +169,9 @@ export default {
                 'A demo admin is created with email: admin@admin.com, pass:123456',
             ],
             links: [
-                {link: 'https://helmetrix.netlify.app/', text: 'Live Site',},
-                {link: 'https://github.com/Adnan0061/Helmetrix-client-side', text: 'Client Side',},
-                {link: 'https://github.com/Adnan0061/Helmetrix-client-side', text: 'Server Side',},
+                {link: 'https://helmetrix.netlify.app/', text: 'Live Site', icon: <Language sx={{fontSize: '1rem', pt: '0px'}} />,},
+                {link: 'https://github.com/Adnan0061/Helmetrix-client-side', text: 'Client Side', icon: <GitHub sx={{fontSize: '1rem', pt: '0px'}} />, },
+                {link: 'https://github.com/Adnan0061/Helmetrix-client-side', text: 'Server Side', icon: <GitHub sx={{fontSize: '1rem', pt: '0px'}} />, },
             ]
         },
         {
@@ -180,21 +180,21 @@ export default {
             title: 'Happy Tours',
             caption: 'Tour package site',
             shortdesc: [
-                "A niche helmet selling site that has a dashboard. Admin and user has different options", 
+                "A tour package service provider site. Book your tour package online", 
                 // "Admin and user has different options access on dashboard",
                 // "Can place manage order, review, and user in the from the dashboard",
             ],
-            githubdesc: [
+            longdesc: [
                 'This projects frontend is created with React and Bootstrap',
                 'Backend is created with Node and express with MongoDb as database. Also used firebase for authentication',
                 'Here 6 ready made tours are but you can add more tours and that will be added in the home page',
                 'From tour details page you can book your tour with default status pending and from my order you will get your bookings',
-                'in manage all order page you will see all orders. you can delete orders as well as update orders. from update orders you can update status also.',
+                'in "manage all order" page you will see all orders. you can delete orders as well as update orders.',
             ],
             links: [
-                {link: 'https://tour-site-mern.netlify.app/', text: 'Live Site',},
-                {link: 'https://github.com/Adnan0061/tour-site-mern-frontend', text: 'Client Side',},
-                {link: 'https://github.com/Adnan0061/tour-site-server-new', text: 'Server Side',},
+                {link: 'https://tour-site-mern.netlify.app/', text: 'Live Site', icon: <Language sx={{fontSize: '1rem', pt: '0px'}} />, },
+                {link: 'https://github.com/Adnan0061/tour-site-mern-frontend', text: 'Client Side', icon: <GitHub sx={{fontSize: '1rem', pt: '0px'}} />,},
+                {link: 'https://github.com/Adnan0061/tour-site-server-new', text: 'Server Side', icon: <GitHub sx={{fontSize: '1rem', pt: '0px'}} />,},
             ]
         },
         {
@@ -207,7 +207,7 @@ export default {
                 // "Admin and user has different options access on dashboard",
                 // "Can place manage order, review, and user in the from the dashboard",
             ],
-            githubdesc: [
+            longdesc: [
                 'A healthcare website that merges doctors ans patients.',
                 'Patient and doctors can have their session both online and offline',
                 'It also has medicine home delivery option',
@@ -215,9 +215,41 @@ export default {
                 'Insurance option for under privileged# eHealth',
             ],
             links: [
-                {link: 'https://ehealth-online-healthcare.netlify.app/', text: 'Live Site',},
-                {link: 'https://github.com/Adnan0061/eHealth', text: 'Client Side',},
+                {link: 'https://ehealth-online-healthcare.netlify.app/', text: 'Live Site', icon: <Language sx={{fontSize: '1rem', pt: '0px'}} />,},
+                {link: 'https://github.com/Adnan0061/eHealth', text: 'Client Side', icon: <GitHub sx={{fontSize: '1rem', pt: '0px'}} />, },
                 
+            ]
+        },
+        {
+            tag: 'Vanila Js',
+            image: ['https://raw.githubusercontent.com/Adnan0061/portfolio-full-stack/main/src/assests/images/projects/Color%20game/1.png', 'https://raw.githubusercontent.com/Adnan0061/portfolio-full-stack/main/src/assests/images/projects/Color%20game/1.png'],
+            title: 'Color Guessing Game',
+            caption: 'A fun game guessing color developed with raw Js',
+            shortdesc: [
+                "A simple fun game guessing color developed with raw Js", 
+            ],
+            longdesc: [
+                'A simple fun game guessing color developed with raw Js',
+                'Every time generates new color',
+                'It uses  random number to generate RGB code and color',
+            ],
+            links: [
+                {link: 'https://adnan0061.github.io/Color-game-project/', text: 'Live Site', icon: <Language sx={{fontSize: '1rem', pt: '0px'}} />,},               
+            ]
+        },
+        {
+            tag: 'Vanila Js',
+            image: ['https://raw.githubusercontent.com/Adnan0061/portfolio-full-stack/main/src/assests/images/projects/eHospital/1.png', 'https://raw.githubusercontent.com/Adnan0061/portfolio-full-stack/main/src/assests/images/projects/eHospital/2.png'],
+            title: 'Country Details',
+            caption: '',
+            shortdesc: [
+                "Simple Api project of rest countries api", 
+            ],
+            longdesc: [
+                'A simple fun game guessing color developed with raw Js',
+            ],
+            links: [
+                {link: 'https://adnan0061.github.io/Country-details-with-API/', text: 'Live Site', icon: <Language sx={{fontSize: '1rem', pt: '0px'}} />,},               
             ]
         },
     ]

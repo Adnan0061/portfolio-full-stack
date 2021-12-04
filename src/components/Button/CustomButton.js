@@ -42,9 +42,8 @@ const CustomButton = ({text, icon, type, value}) => {
             width: '100%',
             marginX: '5px',
 
-        }}>{text}</span>}
-        >
-            {text}
+        }}></span>}
+        >{text}
         </Button>
     );
 };

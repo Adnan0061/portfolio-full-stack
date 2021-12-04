@@ -54,38 +54,52 @@ const PortfolioPanel = () => {
   };
 
   const ProjectDialague = (open) => (
-    <Dialog
-      sx={{height: '100%'}}
-      maxWidth='xl'
-      open={projectDialague}
-      onClose={() => setProjectDialague(false)}
-      aria-labelledby="alert-dialog-title"
-      aria-describedby="alert-dialog-description"
-    >
-      <Grid container rowSpacing={1} columnSpacing={{ xs: 1, sm: 2, md: 3 }}>
-        <Grid item xs={12} sm={12} md={8}>
-          <DialogTitle onClose={() => setProjectDialague(false)}>{projectDialague.title} {projectDialague.caption}</DialogTitle>
-          {
-            projectDialague.links.map(link => <Link sx={{ ml: 3, lineHeight: '26px', fontSize: '17px', textDecoration: 'none' }} href={link.link}>{link.text}</Link>)
-          }
-        </Grid>
-
-      </Grid>
-      <DialogContent>
-        <Box sx={{ height: '25%' }}>
-          <Typography>
-            Description Details:
-          </Typography>
-          <ul>
-            {projectDialague.githubdesc.map(list => <li key={list}>{list}</li>)}
-          </ul>
-        </Box>
-        <Box sx={{ height: '75%' }}>
-          <img style={{ width: '100%', overflow: 'scroll' }} src={projectDialague.image[1]} alt="" />
-        </Box>
+    // <Dialog
+    //   sx={{height: '100%'}}
+    //   maxWidth='xl'
+    //   open={projectDialague}
+    //   onClose={() => setProjectDialague(false)}
+    //   aria-labelledby="alert-dialog-title"
+    //   aria-describedby="alert-dialog-description"
+    // >
+    //   {/* <Grid container rowSpacing={1} columnSpacing={{ xs: 1, sm: 2, md: 3 }}>
+    //     <Grid item xs={12} sm={12} md={8}> */}
+    //       <DialogTitle onClose={() => setProjectDialague(false)}>{projectDialague.title} {projectDialague.caption}</DialogTitle>
+    //       {
+    //         projectDialague.links.map(link => <Link sx={{ ml: 3, lineHeight: '26px', fontSize: '17px', textDecoration: 'none' }} href={link.link} target='_blank'>{link.text}</Link>)
+    //       }
+    //     {/* </Grid>
+    //   </Grid> */}
+    //   <DialogContent>
+    //     {/* <Box sx={{ height: '25%' }}> */}
+    //       <Typography>
+    //         Description Details:
+    //       </Typography>
+    //       <ul>
+    //         {projectDialague.longdesc.map(list => <li key={list}>{list}</li>)}
+    //       </ul>
+    //     {/* </Box> */}
+    //     <Box sx={{ height: '75%' }}>
+    //       <img style={{ width: '100%', overflow: 'scroll' }} src={projectDialague.image[1]} alt="" />
+    //     </Box>
+    //   </DialogContent>
+    //   <DialogActions>
+    //     All actions
+    //   </DialogActions>
+    // </Dialog>
+    <Dialog maxWidth='xl' open={projectDialague} onClose={() => setProjectDialague(false)}>
+      <DialogTitle>{projectDialague.title} - {projectDialague.caption}</DialogTitle>
+      <Box sx={{ height: '75vh', width: '100%', border: '3px solid #FFC500', overflowY: 'scroll'}}>
+      <img style={{width: '100%'}} src={projectDialague.image[1]} alt="" />
+      </Box>
+      <DialogContent sx={{overflowY: 'scroll'}}>
+        <Typography>Desciption</Typography>
+        <ul>
+        {projectDialague.longdesc.map(list => <li>{list}</li>)}
+        </ul>
       </DialogContent>
       <DialogActions>
-        All actions
+      {projectDialague?.links.map( link => <Link style={{textDecoration:'none'}} href={link.link} target="_blank"><CustomButton text={link.text} icon={link.icon}/></Link>)}
       </DialogActions>
     </Dialog>
   )
@@ -112,9 +126,9 @@ const PortfolioPanel = () => {
       <TabPanel value={value} index={0}>
         <Grid container spacing={{ xs: 2, md: 3 }} columns={{ xs: 4, sm: 8, md: 12 }}>
           {resumeData.projects.map((project) => (
+            <Grid item xs={12} sm={6} md={4}>
 
-            <Grid key={project.title} item xs={12} sm={6} md={4}>
-              <Card sx={{ boxShadow: '0 2px 92px 0 rgba(0,0,0,0.13)', borderRadius: '6px' }} onClick={() => setProjectDialague(project)}>
+              <Card sx={{ boxShadow: '0 2px 92px 0 rgba(0,0,0,0.13)', borderRadius: '6px' }} height='100%' onClick={() => setProjectDialague(project)}>
                 {/* <Card onClick={hamdleOnClick}> */}
                 <CardActionArea>
                   <CardMedia
@@ -124,17 +138,18 @@ const PortfolioPanel = () => {
                     align='top'
                     image={project.image[0]}
                   />
-                  <CardContent >
+                  <CardContent sx={{ height: '100px', borderTop: '3px solid #FFC500' }} >
                     <Typography sx={{ fontSize: '17px', }} gutterBottom variant="h5" component="div">
                       {project.title}
                     </Typography>
-                    <Typography sx={{ fontSize: '14px', }} variant="body2" color="text.secondary">
+                    <Typography sx={{ fontSize: '14px', height: '45px', overflowY: 'scroll' }} variant="body2" color="text.secondary">
                       {project.shortdesc}
                     </Typography>
                   </CardContent>
                 </CardActionArea>
               </Card>
-            </Grid>)
+            </Grid>
+          )
           )}
         </Grid>
 
@@ -149,8 +164,9 @@ const PortfolioPanel = () => {
                 return (
                   <>
                     {project.tag == tag &&
-                      <Grid key={project.title} item xs={12} sm={6} md={4}>
-                        <Card sx={{ boxShadow: '0 2px 92px 0 rgba(0,0,0,0.13)', borderRadius: '6px' }} onClick={() => setProjectDialague(project)}>
+                      <Grid item xs={12} sm={6} md={4}>
+
+                        <Card sx={{ boxShadow: '0 2px 92px 0 rgba(0,0,0,0.13)', borderRadius: '6px' }} height='100%' onClick={() => setProjectDialague(project)}>
                           {/* <Card onClick={hamdleOnClick}> */}
                           <CardActionArea>
                             <CardMedia
@@ -160,11 +176,11 @@ const PortfolioPanel = () => {
                               align='top'
                               image={project.image[0]}
                             />
-                            <CardContent >
+                            <CardContent sx={{ height: '100px', borderTop: '3px solid #FFC500' }} >
                               <Typography sx={{ fontSize: '17px', }} gutterBottom variant="h5" component="div">
                                 {project.title}
                               </Typography>
-                              <Typography sx={{ fontSize: '14px', }} variant="body2" color="text.secondary">
+                              <Typography sx={{ fontSize: '14px', height: '45px', overflowY: 'scroll' }} variant="body2" color="text.secondary">
                                 {project.shortdesc}
                               </Typography>
                             </CardContent>
