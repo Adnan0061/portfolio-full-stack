@@ -10,6 +10,11 @@ import { TimelineContent, TimelineDot, TimelineItem, TimelineSeparator } from '@
 // import { height } from '@mui/system';
 
 
+const underlineColor = {
+    background: 'linear-gradient(to bottom, #00000000, #00000000 70%, #FFC500 70%)',
+}
+
+
 const ResumeTimelineItem = ({ title, duration, company, info }) => {
     const [listInfo, setListInfo] = useState([])
     useEffect(()=>{
@@ -52,7 +57,8 @@ const Resume = () => {
             {/* 1 column about  */}
             <Box sx={{ mb: 5 }}>
                 <Box>
-                    <Typography sx={{ mb: 4 }} variant='h6'>About Me</Typography>
+                    {/* <span style={}></span> */}
+                    <Typography sx={{ mb: 4 }} variant='h6'><span style={underlineColor}>About Me</span></Typography>
                 </Box>
                 <Box>
                     <Typography>{resumeData.about}</Typography>
@@ -60,7 +66,7 @@ const Resume = () => {
             </Box>
 
             <Box sx={{ mb: 5 }}>
-                <Typography sx={{ mb: 4 }} variant='h6'>Resume</Typography>
+                <Typography sx={{ mb: 4 }} variant='h6'><span style={underlineColor}>Resume</span></Typography>
 
                 <Grid container rowSpacing={1} columnSpacing={{ xs: 1, sm: 2, md: 3 }}>
 
@@ -70,7 +76,7 @@ const Resume = () => {
                                 {
                                     resumeData.resumeProjects.map( data => {
                                         return(
-                                        <ResumeTimelineItem title={data.title} duration={data.duration} company={data.company} info={[...data.info]} />
+                                        <ResumeTimelineItem key={data.title} title={data.title} duration={data.duration} company={data.company} info={[...data.info]} />
                                         )
                                     })
                                     
@@ -100,7 +106,7 @@ const Resume = () => {
                             {
                                     resumeData.education.map( data => {
                                         return(
-                                        <ResumeTimelineItem title={data.title} duration={data.duration} company={data.company} />
+                                        <ResumeTimelineItem key={data.title} title={data.title} duration={data.duration} company={data.company} />
                                         )
                                     })
                                     
@@ -127,7 +133,7 @@ const Resume = () => {
             </Box>
 
             <Box sx={{ mb: 5 }}>
-                <Typography sx={{ mb: 4 }} variant='h6'>Skills</Typography>
+                <Typography sx={{ mb: 4 }} variant='h6'><span style={underlineColor}>Skills</span></Typography>
                 <Container>
                     <Grid container>
                         {resumeData.skills.map(skill => {

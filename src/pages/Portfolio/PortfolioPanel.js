@@ -54,6 +54,7 @@ const PortfolioPanel = () => {
   };
 
   const ProjectDialague = (open) => (
+
     // <Dialog
     //   sx={{height: '100%'}}
     //   maxWidth='xl'
@@ -87,6 +88,7 @@ const PortfolioPanel = () => {
     //     All actions
     //   </DialogActions>
     // </Dialog>
+
     <Dialog maxWidth='xl' open={projectDialague} onClose={() => setProjectDialague(false)}>
       <DialogTitle>{projectDialague.title} - {projectDialague.caption}</DialogTitle>
       <Box sx={{ height: '75vh', width: '100%', border: '3px solid #FFC500', overflowY: 'scroll'}}>
@@ -95,11 +97,11 @@ const PortfolioPanel = () => {
       <DialogContent sx={{overflowY: 'scroll'}}>
         <Typography>Desciption</Typography>
         <ul>
-        {projectDialague.longdesc.map(list => <li>{list}</li>)}
+        {projectDialague.longdesc.map(list => <li key={list}>{list}</li>)}
         </ul>
       </DialogContent>
       <DialogActions>
-      {projectDialague?.links.map( link => <Link style={{textDecoration:'none'}} href={link.link} target="_blank"><CustomButton text={link.text} icon={link.icon}/></Link>)}
+      {projectDialague?.links.map( link => <Link key={link} style={{textDecoration:'none'}} href={link.link} target="_blank"><CustomButton text={link.text} icon={link.icon}/></Link>)}
       </DialogActions>
     </Dialog>
   )
@@ -113,11 +115,11 @@ const PortfolioPanel = () => {
       <Box sx={{ borderBottom: 1, borderColor: 'divider' }}>
         <Tabs value={value} indicatorColor='none' onChange={handleChange} aria-label="basic tabs example">
 
-          <Tab sx={{ fontSize: '14px', fontWeight: '500' }} label="All" {...a11yProps(0)} />
+          <Tab sx={{ fontSize: '14px', fontWeight: '600' }} label="All" {...a11yProps(0)} />
           {
             tabsSet.map(tag => {
               return (
-                <Tab key={tag} sx={{ fontSize: '14px', fontWeight: '500' }} label={tag} {...a11yProps(tabsSet.indexOf(tag) + 1)} />
+                <Tab key={tag} sx={{ fontSize: '14px', fontWeight: '600' }} label={tag} {...a11yProps(tabsSet.indexOf(tag) + 1)} />
               )
             })}
         </Tabs>
@@ -125,8 +127,8 @@ const PortfolioPanel = () => {
 
       <TabPanel value={value} index={0}>
         <Grid container spacing={{ xs: 2, md: 3 }} columns={{ xs: 4, sm: 8, md: 12 }}>
-          {resumeData.projects.map((project) => (
-            <Grid item xs={12} sm={6} md={4}>
+          {resumeData.projects.map(project => (
+            <Grid key={project.title} item xs={12} sm={6} md={4}>
 
               <Card sx={{ boxShadow: '0 2px 92px 0 rgba(0,0,0,0.13)', borderRadius: '6px' }} height='100%' onClick={() => setProjectDialague(project)}>
                 {/* <Card onClick={hamdleOnClick}> */}
@@ -158,13 +160,13 @@ const PortfolioPanel = () => {
 
       {tabsSet.map(tag => {
         return (
-          <TabPanel value={value} index={tabsSet.indexOf(tag) + 1}>
+          <TabPanel key={tag} value={value} index={tabsSet.indexOf(tag) + 1}>
             <Grid container spacing={{ xs: 2, md: 3 }} columns={{ xs: 4, sm: 8, md: 12 }}>
               {resumeData.projects.map(project => {
                 return (
                   <>
                     {project.tag == tag &&
-                      <Grid item xs={12} sm={6} md={4}>
+                      <Grid key={project.tag} item xs={12} sm={6} md={4}>
 
                         <Card sx={{ boxShadow: '0 2px 92px 0 rgba(0,0,0,0.13)', borderRadius: '6px' }} height='100%' onClick={() => setProjectDialague(project)}>
                           {/* <Card onClick={hamdleOnClick}> */}

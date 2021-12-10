@@ -2,7 +2,7 @@ import { GitHub, Language, LinkedIn, Map } from "@mui/icons-material";
 
 export default {
     name: 'Adnan Ahmed',
-    title: 'full stack developer',
+    title: 'Full Stack Developer',
     email: 'adnan.ahmed0061@gmail.com',
 
     socials: {
@@ -34,7 +34,7 @@ export default {
             title: 'Front-End Library',
             description: [
                 'Bootstrap5',
-                'React - Bootstrap',
+                'React-Bootstrap',
                 'TailWind',
                 'Material UI',]
         },
@@ -62,7 +62,7 @@ export default {
         {
             title: 'Hrlmetrix  (full stack)',
             duration: 'November 2021',
-            company: 'Personal Projecr',
+            company: 'Personal Project',
             info: [
                 "A niche helmet selling site that has a dashboard", 
                 "Admin and user has different options access on dashboard",
@@ -72,7 +72,7 @@ export default {
         {
             title: 'Happy Tours (full stack - Tour Package Booking Site)',
             duration: 'November 2021',
-            company: 'Personal Projecr',
+            company: 'Personal Project',
             info: [
                 "A niche helmet selling site that has a dashboard.", 
                 "Admin and user has different options access on dashboard",
@@ -82,7 +82,7 @@ export default {
         {
             title: 'Color Guessing Game (raw JavaScribe project)',
             duration: 'october 2021',
-            company: 'Personal Projecr',
+            company: 'Personal Project',
             info: [
                 "It's a game created with simple raw HTML, CSS, JavaScript", 
                 "The game is, with every refresh a color RGB code is generated randomly and a few color box is generated randomly.",
@@ -150,7 +150,7 @@ export default {
     projects: [
         {
             tag: 'Full Stack (MERN)',
-            image: ['https://raw.githubusercontent.com/Adnan0061/portfolio-full-stack/main/src/assests/images/projects/helmetrix/1.png', 'https://github.com/Adnan0061/portfolio-full-stack/blob/main/src/assests/images/projects/helmetrix/2.png?raw=true'],
+            image: ['https://i.ibb.co/w0tBPzZ/1.png','https://i.ibb.co/jVWNNCW/2.png'],
             title: 'Hrlmetrix  (full stack)',
             caption: '',
             shortdesc: [
@@ -176,7 +176,7 @@ export default {
         },
         {
             tag: 'Full Stack (MERN)',
-            image: ['https://raw.githubusercontent.com/Adnan0061/portfolio-full-stack/main/src/assests/images/projects/Happy%20Tours/1.png', 'https://raw.githubusercontent.com/Adnan0061/portfolio-full-stack/main/src/assests/images/projects/Happy%20Tours/2.png'],
+            image: ['https://i.ibb.co/qyLF5tD/1.png','https://i.ibb.co/J5dnHwX/2.png'],
             title: 'Happy Tours',
             caption: 'Tour package site',
             shortdesc: [
@@ -199,7 +199,7 @@ export default {
         },
         {
             tag: 'React',
-            image: ['https://raw.githubusercontent.com/Adnan0061/portfolio-full-stack/main/src/assests/images/projects/eHospital/1.png', 'https://raw.githubusercontent.com/Adnan0061/portfolio-full-stack/main/src/assests/images/projects/eHospital/2.png'],
+            image: ['https://i.ibb.co/XWsQYQx/1.png','https://i.ibb.co/GcNzfr1/2.png',],
             title: 'eHealth',
             caption: 'online healthcare site',
             shortdesc: [
@@ -222,7 +222,7 @@ export default {
         },
         {
             tag: 'Vanila Js',
-            image: ['https://raw.githubusercontent.com/Adnan0061/portfolio-full-stack/main/src/assests/images/projects/Color%20game/1.png', 'https://raw.githubusercontent.com/Adnan0061/portfolio-full-stack/main/src/assests/images/projects/Color%20game/1.png'],
+            image: ['https://i.ibb.co/4WTVtRY/1.png', 'https://i.ibb.co/4WTVtRY/1.png'],
             title: 'Color Guessing Game',
             caption: 'A fun game guessing color developed with raw Js',
             shortdesc: [
@@ -239,7 +239,7 @@ export default {
         },
         {
             tag: 'Vanila Js',
-            image: ['https://raw.githubusercontent.com/Adnan0061/portfolio-full-stack/main/src/assests/images/projects/Country%20details/Document.png', 'https://raw.githubusercontent.com/Adnan0061/portfolio-full-stack/main/src/assests/images/projects/Country%20details/Document.png'],
+            image: ['https://i.ibb.co/Pzkyt72/Document.png', 'https://i.ibb.co/Pzkyt72/Document.png'],
             title: 'Country Details',
             caption: '',
             shortdesc: [

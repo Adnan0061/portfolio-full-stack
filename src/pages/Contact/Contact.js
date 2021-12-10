@@ -2,9 +2,14 @@ import React, { useRef } from 'react';
 import emailjs from 'emailjs-com';
 import Box from '@mui/material/Box';
 import { Grid, TextField, Typography } from '@mui/material';
-import TextareaAutosize from '@mui/material/TextareaAutosize';
 import CustomButton from '../../components/Button/CustomButton';
 import { Send } from '@mui/icons-material';
+
+
+const underlineColor = {
+    background: 'linear-gradient(to bottom, #00000000, #00000000 70%, #FFC500 70%)',
+}
+
 
 const Contact = () => {
     const form = useRef();
@@ -27,7 +32,7 @@ const Contact = () => {
             <Box>
                 <Grid container spacing={{ xs: 2, md: 3 }}>
                     <Grid item xs={12} sm={12} md={7}>
-                        <Typography sx={{ mb: 4 }} variant='h6'>Contact Form</Typography>
+                        <Typography sx={{ mb: 4 }} variant='h6'><span style={underlineColor}>Contact Form</span></Typography>
                         
                         <form ref={form} onSubmit={sendEmail}>
 
@@ -64,7 +69,7 @@ const Contact = () => {
                     </Grid>
 
                     <Grid item xs={12} sm={12} md={5}>
-                        <Typography sx={{ mb: 4 }} variant='h6'>Contact Info</Typography>
+                        <Typography sx={{ mb: 4 }} variant='h6'><span style={underlineColor}>Contact Info</span></Typography>
                         <Typography sx={{pt:2, pb:1, color: 'gray', fontSize: '15px'}}><span style={{color: 'black',}}>Address:</span> Tejgaon, Dhaka, Bangladesh</Typography>
                         <Typography sx={{ pb:1, color: 'gray', fontSize: '15px'}}><span style={{color: 'black',}}>Email:</span> adnan.ahmed0061@gmail.com</Typography>
                         <Typography sx={{ pb:1, color: 'gray', fontSize: '15px'}}><span style={{color: 'black',}}>WhatsApp</span>: +8801911285740</Typography>
