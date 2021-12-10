@@ -12,6 +12,9 @@ const CustomButton = ({text, icon, type, value}) => {
         sx={{
             backgroundColor: `${themeOptions.pColor}`,
             color: `${themeOptions.sColor}`,
+            '&:hover': {
+                backgroundColor: '#F5BC00',
+            },
             fontSize: '14px',
             fontWeight: 500,
             border: 0,
