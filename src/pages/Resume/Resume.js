@@ -11,7 +11,7 @@ import { TimelineContent, TimelineDot, TimelineItem, TimelineSeparator } from '@
 
 
 const underlineColor = {
-    background: 'linear-gradient(to bottom, #00000000, #00000000 70%, #FFC500 70%)',
+    background: 'linear-gradient(to bottom, #00000000, #00000000 75%, #FFC500 75%)',
 }
 
 

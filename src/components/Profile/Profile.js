@@ -2,6 +2,7 @@ import React from 'react';
 import { Box, Button, Typography } from '@mui/material';
 // import { fontSize, fontWeight, padding } from '@mui/system';
 import myself from '../../assests/images/mine.JPG'
+import formal from '../../assests/images/Adnan Ahmed.jpg'
 import './Profile.css'
 import CusstomTimeline, { CusstomTimelineItem } from '../CusstomTimeline/CusstomTimeline';
 import resumeData from '../../utils/resumeData';

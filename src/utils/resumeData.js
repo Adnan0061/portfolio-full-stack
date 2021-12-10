@@ -211,12 +211,34 @@ export default {
                 'A healthcare website that merges doctors ans patients.',
                 'Patient and doctors can have their session both online and offline',
                 'It also has medicine home delivery option',
-                '24/7 support',
                 'Insurance option for under privileged# eHealth',
             ],
             links: [
                 {link: 'https://ehealth-online-healthcare.netlify.app/', text: 'Live Site', icon: <Language sx={{fontSize: '1rem', pt: '0px'}} />,},
                 {link: 'https://github.com/Adnan0061/eHealth', text: 'Client Side', icon: <GitHub sx={{fontSize: '1rem', pt: '0px'}} />, },
+                
+            ]
+        },
+        {
+            tag: 'React',
+            image: ['https://i.ibb.co/g9pV2RC/1.png','https://i.ibb.co/f902Cbx/2.png',],
+            title: 'Future Leaders',
+            caption: 'online courses site',
+            shortdesc: [
+                "A online site. React based site", 
+                // "Admin and user has different options access on dashboard",
+                // "Can place manage order, review, and user in the from the dashboard",
+            ],
+            longdesc: [
+                'A Online course completing site.',
+                'Has search option',
+                'Used react bootstrap',
+                'react hook form',
+                'firebase authentication',
+            ],
+            links: [
+                {link: 'https://online-course-site-assignment-9.netlify.app/', text: 'Live Site', icon: <Language sx={{fontSize: '1rem', pt: '0px'}} />,},
+                {link: 'https://github.com/Adnan0061/future-leaders-react', text: 'Client Side', icon: <GitHub sx={{fontSize: '1rem', pt: '0px'}} />, },
                 
             ]
         },
@@ -234,7 +256,27 @@ export default {
                 'It uses  random number to generate RGB code and color',
             ],
             links: [
-                {link: 'https://adnan0061.github.io/Color-game-project/', text: 'Live Site', icon: <Language sx={{fontSize: '1rem', pt: '0px'}} />,},               
+                {link: 'https://adnan0061.github.io/Color-game-project/', text: 'Live Site', icon: <Language sx={{fontSize: '1rem', pt: '0px'}} />,},
+                {link: 'https://github.com/Adnan0061/Color-game-project', text: 'Client Side', icon: <GitHub sx={{fontSize: '1rem', pt: '0px'}} />, },               
+            ]
+        },
+        {
+            tag: 'Vanila Js',
+            image: ['https://i.ibb.co/c8NqzQz/1.png','https://i.ibb.co/7NR9Yyw/2.png'],
+            title: 'Authors to cart',
+            caption: 'A simple website to add authors to cart list',
+            shortdesc: [
+                "simple website to add authors to cart list", 
+            ],
+            longdesc: [
+                'you will know top-selling authors details',
+                'you can choose from them to add to your reading list',
+                'your choosen authors and their combine total books will be displayed',
+                'currently no API is used, a custom JSON is used.',
+            ],
+            links: [
+                {link: 'https://top-selling-authors-to-read.netlify.app', text: 'Live Site', icon: <Language sx={{fontSize: '1rem', pt: '0px'}} />,},  
+                {link: 'https://github.com/Adnan0061/top-authors', text: 'Client Side', icon: <GitHub sx={{fontSize: '1rem', pt: '0px'}} />, },             
             ]
         },
         {
@@ -247,9 +289,60 @@ export default {
             ],
             longdesc: [
                 'A simple fun game guessing color developed with raw Js',
+                'A API practice project',
+                'Rest Countries API used',
             ],
             links: [
-                {link: 'https://adnan0061.github.io/Country-details-with-API/', text: 'Live Site', icon: <Language sx={{fontSize: '1rem', pt: '0px'}} />,},               
+                {link: 'https://adnan0061.github.io/Country-details-with-API/', text: 'Live Site', icon: <Language sx={{fontSize: '1rem', pt: '0px'}} />,},     
+                {link: 'https://github.com/Adnan0061/Country-details-with-API', text: 'Client Side', icon: <GitHub sx={{fontSize: '1rem', pt: '0px'}} />, },          
+            ]
+        },
+        {
+            tag: 'Vanila Js',
+            image: ['https://i.ibb.co/tPyFnNT/1.png', 'https://i.ibb.co/tPyFnNT/1.png'],
+            title: 'Mak purchase page',
+            caption: 'A parchase page with raw javascript ',
+            shortdesc: [
+                "A parchase page with raw javascript", 
+            ],
+            longdesc: [
+                'A parchase page with raw javascript with all the functions',
+            ],
+            links: [
+                {link: 'https://mak-purchase.netlify.app/', text: 'Live Site', icon: <Language sx={{fontSize: '1rem', pt: '0px'}} />,},    
+                {link: 'https://github.com/Adnan0061/mak-purchase-page', text: 'Client Side', icon: <GitHub sx={{fontSize: '1rem', pt: '0px'}} />, },           
+            ]
+        },
+        {
+            tag: 'Vanila Js',
+            image: ['https://i.ibb.co/W3rkTYw/Books.png', 'https://i.ibb.co/W3rkTYw/Books.png'],
+            title: 'Search book',
+            caption: 'A API search page',
+            shortdesc: [
+                "A API search page", 
+            ],
+            longdesc: [
+                'A API search page',
+            ],
+            links: [
+                {link: 'https://book-search-api-assignment.netlify.app/', text: 'Live Site', icon: <Language sx={{fontSize: '1rem', pt: '0px'}} />,},    
+                {link: 'https://github.com/Adnan0061/book-search', text: 'Client Side', icon: <GitHub sx={{fontSize: '1rem', pt: '0px'}} />, },           
+            ]
+        },
+        {
+            tag: 'Vanila Js',
+            image: ['https://i.ibb.co/jD5vYWc/1.png','https://i.ibb.co/f18TpVN/2.png'],
+            title: 'popstick Store',
+            caption: 'A API search store page',
+            shortdesc: [
+                "A API search store page", 
+            ],
+            longdesc: [
+                'A API search store page',
+            ],
+            links: [
+                {link: 'https://popstick-store.netlify.app/', text: 'Live Site', icon: <Language sx={{fontSize: '1rem', pt: '0px'}} />,},    
+                {link: 'https://github.com/Adnan0061/popstick-store', text: 'Client Side', icon: <GitHub sx={{fontSize: '1rem', pt: '0px'}} />, },           
             ]
         },
     ]

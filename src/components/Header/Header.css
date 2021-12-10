@@ -12,6 +12,10 @@
 } */
 
 
-.MuiTab-root.MuiTab-textColorPrimary.Mui-selected.css-1jn1t8-MuiButtonBase-root-MuiTab-root{
+.MuiTab-root.MuiTab-textColorPrimary.Mui-selected{
     color: #FFC500;
 }
+
+/* .css-1luslbh.Mui-selected {
+    color: #FFC500;
+} */
