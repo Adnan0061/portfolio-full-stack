@@ -113,7 +113,7 @@ const PortfolioPanel = () => {
     <Box sx={{ width: '100%' }}>
 
       <Box sx={{ borderBottom: 1, borderColor: 'divider' }}>
-        <Tabs value={value} indicatorColor='none' onChange={handleChange} aria-label="basic tabs example">
+        <Tabs value={value} indicatorColor='none' onChange={handleChange} variant="scrollable" scrollButtons="auto" aria-label="scrollable auto tabs">
 
           <Tab sx={{ fontSize: '14px', fontWeight: '600' }} label="All" {...a11yProps(0)} />
           {
