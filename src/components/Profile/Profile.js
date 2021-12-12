@@ -51,6 +51,13 @@ const Profile = () => {
         color: '#777'
     }
 
+    // const onDownload = () => {
+    //     const link = document.createElement("a");
+    //     link.download = `https://drive.google.com/file/d/1BkiB2Vz4gni4avlhRohOGGZIL2izm-fj/view?usp=sharing`;
+    //     link.href = "https://drive.google.com/file/d/1BkiB2Vz4gni4avlhRohOGGZIL2izm-fj/view?usp=sharing";
+    //     link.click();
+    //   };
+
     return (
         <Box sx={{ backgroundColor: 'white',  boxShadow: '0 2px 92px 0 rgba(0,0,0,0.13)', borderRadius: '5px' }}>
             <Box sx={profile}>
@@ -73,7 +80,9 @@ const Profile = () => {
                 </CusstomTimeline> 
                 <br />
                 <Box sx={{mb:3, mt: -5, ml: 2}}>
-                <Link style={{textDecoration:'none'}} to="../../assests/ADNAN AHMED - Resume - MERN Stack Developer.pdf" target="_blank" download><CustomButton sx={{mb: 3}} text={'Download Resume'} icon={<Download sx={{fontSize: '1rem', pt: '2px'}}/>}/></Link>
+                    <a style={{textDecoration:'none'}} href="https://drive.google.com/uc?export=download&id=1BkiB2Vz4gni4avlhRohOGGZIL2izm-fj" download>
+                    <CustomButton sx={{mb: 3}} text={'Download Resume'} icon={<Download sx={{fontSize: '1rem', pt: '2px'}}/>}/>
+                </a>
                 </Box>
             </Box>
         </Box>

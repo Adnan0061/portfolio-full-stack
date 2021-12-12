@@ -138,7 +138,7 @@ const Resume = () => {
                     <Grid container>
                         {resumeData.skills.map(skill => {
                             return (
-                                <Grid key={skill.title} item xs={12} sm={6} md={3}>
+                                <Grid key={skill.title} sx={{my: 1}} item xs={12} sm={6} md={3}>
                                     <Box sx={{ backgroundColor: '#D3D3D322', mx: 1, height: '100%', p: 2 }}>
                                         <Typography sx={{ fontSize: '17px', fontWeight: '600' }}>{skill.title}</Typography>
                                         <ul style={{ paddingLeft: '1rem', }}>
