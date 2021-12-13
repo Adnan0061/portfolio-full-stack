@@ -1,14 +1,14 @@
 import React from 'react';
-import { Box, Button, Typography } from '@mui/material';
+import { Box, Typography } from '@mui/material';
 // import { fontSize, fontWeight, padding } from '@mui/system';
 import myself from '../../assests/images/mine.JPG'
-import formal from '../../assests/images/Adnan Ahmed.jpg'
+// import formal from '../../assests/images/Adnan Ahmed.jpg'
 import './Profile.css'
 import CusstomTimeline, { CusstomTimelineItem } from '../CusstomTimeline/CusstomTimeline';
 import resumeData from '../../utils/resumeData';
 import { Download, PersonOutlined } from '@mui/icons-material';
 import CustomButton from '../Button/CustomButton';
-import { Link } from 'react-router-dom';
+// import { Link } from 'react-router-dom';
 
 
 const ProfileTimelineItem = ({ title, text, link}) => {

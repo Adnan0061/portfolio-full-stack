@@ -1,6 +1,7 @@
-import { GitHub, Language, LinkedIn, Map } from "@mui/icons-material";
+import { GitHub, Language, LinkedIn } from "@mui/icons-material";
 
-export default {
+
+const resumeData = {
     name: 'Adnan Ahmed',
     title: 'Full Stack Developer',
     email: 'adnan.ahmed0061@gmail.com',
@@ -347,3 +348,5 @@ export default {
         },
     ]
 }
+
+export default resumeData;

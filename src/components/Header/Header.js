@@ -2,12 +2,12 @@ import * as React from 'react';
 import PropTypes from 'prop-types';
 import Tabs from '@mui/material/Tabs';
 import Tab from '@mui/material/Tab';
-import Typography from '@mui/material/Typography';
+// import Typography from '@mui/material/Typography';
 import Box from '@mui/material/Box';
 import Resume from '../../pages/Resume/Resume';
 import Portfolio from '../../pages/Portfolio/Portfolio';
 import './Header.css'
-import { fontSize } from '@mui/system';
+// import { fontSize } from '@mui/system';
 import { Home } from '@mui/icons-material';
 import './Header.css'
 import Contact from '../../pages/Contact/Contact';

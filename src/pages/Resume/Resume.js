@@ -4,8 +4,8 @@ import { Grid, Typography, Container } from '@mui/material';
 import resumeData from '../../utils/resumeData';
 import CusstomTimeline, { CusstomTimelineItem } from '../../components/CusstomTimeline/CusstomTimeline';
 import './Resume.css'
-import { CastForEducation, PersonOutlined, School, Work } from '@mui/icons-material';
-import CustomButton from '../../components/Button/CustomButton';
+import { School, Work } from '@mui/icons-material';
+// import CustomButton from '../../components/Button/CustomButton';
 import { TimelineContent, TimelineDot, TimelineItem, TimelineSeparator } from '@mui/lab';
 // import { height } from '@mui/system';
 
@@ -36,9 +36,7 @@ const ResumeTimelineItem = ({ title, duration, company, info }) => {
                     <ul style={{ paddingLeft: '1rem', }}>
                         {listInfo?.map( list => {
                             return(
-                                <>
                                     <li key={list}>{list}</li>
-                                </>
                             )
                         })}
                     </ul>

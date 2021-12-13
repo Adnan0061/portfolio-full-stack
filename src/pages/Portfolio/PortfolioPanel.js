@@ -5,9 +5,9 @@ import Tab from '@mui/material/Tab';
 import Typography from '@mui/material/Typography';
 import Box from '@mui/material/Box';
 import resumeData from '../../utils/resumeData';
-import { Button, Card, CardActionArea, CardActions, CardContent, CardMedia, Dialog, DialogActions, DialogContent, DialogTitle, Grid, Link } from '@mui/material';
-import ProjectDialague from './ProjectDialague';
-import SimpleDialogDemo from './ProjectDialague';
+import { Card, CardActionArea, CardContent, CardMedia, Dialog, DialogActions, DialogContent, DialogTitle, Grid, Link } from '@mui/material';
+// import ProjectDialague from './ProjectDialague';
+// import SimpleDialogDemo from './ProjectDialague';
 import CustomButton from '../../components/Button/CustomButton';
 // import ProjectDialague from './ProjectDialague'
 
@@ -165,7 +165,7 @@ const PortfolioPanel = () => {
               {resumeData.projects.map(project => {
                 return (
                   <>
-                    {project.tag == tag &&
+                    {project.tag === tag &&
                       <Grid key={project.tag} item xs={12} md={6} lg={4}>
 
                         <Card sx={{ boxShadow: '0 2px 92px 0 rgba(0,0,0,0.13)', borderRadius: '6px' }} height='100%' onClick={() => setProjectDialague(project)}>

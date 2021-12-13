@@ -1,7 +1,5 @@
 import * as React from 'react';
-import { experimentalStyled as styled } from '@mui/material/styles';
 import Box from '@mui/material/Box';
-import Paper from '@mui/material/Paper';
 import Grid from '@mui/material/Grid';
 import { Typography } from '@mui/material';
 
@@ -11,7 +9,7 @@ const Footer = () => {
     <Box sx={{ flexGrow: 1, backgroundColor: '#1E1E1E', mt: 3, borderRadius: '10px', boxShadow: '0 2px 92px 0 rgba(0,0,0,0.13)' }}>
       <Grid container spacing={{ xs: 2, md: 3,}} sx={{ px:3, pb:3 }}>
 
-          <Grid item sx={{p:0}} xs={6} sx={{textAlign: 'left', display: 'flex', alignItems: 'center'}}>
+          <Grid item xs={6} sx={{p:0, textAlign: 'left', display: 'flex', alignItems: 'center'}}>
             <Typography sx={{color: 'lightgray'}}>Adnan Ahmed</Typography>
           </Grid>
 
