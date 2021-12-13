@@ -125,7 +125,7 @@ const resumeData = {
             ], 
         },
         {
-            title: 'M.Sc',
+            title: 'M.Sc in Mathematics',
             duration: '2016 - June 2016',
             company: 'Jahangirnagar University',
             info: [
@@ -135,7 +135,7 @@ const resumeData = {
             ], 
         },
         {
-            title: 'B.Sc',
+            title: 'B.Sc in Mathematics',
             duration: '2011 - June 2016',
             company: 'Jahangirnagar University',
             info: [
