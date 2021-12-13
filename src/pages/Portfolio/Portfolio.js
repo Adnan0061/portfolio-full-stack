@@ -2,6 +2,7 @@ import React from 'react';
 import Box from '@mui/material/Box';
 import { Typography } from '@mui/material';
 import PortfolioPanel from './PortfolioPanel';
+import '../../components/Scrollbar/scrollbar.css'
 
 
 const underlineColor = {

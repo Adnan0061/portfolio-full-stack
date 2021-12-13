@@ -17,7 +17,7 @@ function App() {
           <Profile/>
         </Grid>
 
-        <Grid item xs sx={{mt: '25px'}}>
+        <Grid item sx={{mt: '25px'}} xs={12} sm={7} md={8} lg={9}>
           <Box sx={{borderRadius: '6px', gap:3 }}>
             <Header />
             <br/>

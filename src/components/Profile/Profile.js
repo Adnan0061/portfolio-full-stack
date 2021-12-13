@@ -6,7 +6,7 @@ import formal from '../../assests/images/Adnan Ahmed.jpg'
 import './Profile.css'
 import CusstomTimeline, { CusstomTimelineItem } from '../CusstomTimeline/CusstomTimeline';
 import resumeData from '../../utils/resumeData';
-import { Download, FileDownload, PersonOutlined } from '@mui/icons-material';
+import { Download, PersonOutlined } from '@mui/icons-material';
 import CustomButton from '../Button/CustomButton';
 import { Link } from 'react-router-dom';
 

@@ -39,7 +39,7 @@ export default {
                 'Material UI',]
         },
         {
-            title: 'Hosting Tools',
+            title: 'Hosting & Version Control Tools',
             description: [
                 'GitHub',
                 'Firebase',
@@ -171,7 +171,7 @@ export default {
             links: [
                 {link: 'https://helmetrix.netlify.app/', text: 'Live Site', icon: <Language sx={{fontSize: '1rem', pt: '0px'}} />,},
                 {link: 'https://github.com/Adnan0061/Helmetrix-client-side', text: 'Client Side', icon: <GitHub sx={{fontSize: '1rem', pt: '0px'}} />, },
-                {link: 'https://github.com/Adnan0061/Helmetrix-client-side', text: 'Server Side', icon: <GitHub sx={{fontSize: '1rem', pt: '0px'}} />, },
+                {link: 'https://github.com/Adnan0061/Helmetrix-server-side', text: 'Server Side', icon: <GitHub sx={{fontSize: '1rem', pt: '0px'}} />, },
             ]
         },
         {

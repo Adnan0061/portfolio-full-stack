@@ -126,9 +126,9 @@ const PortfolioPanel = () => {
       </Box>
 
       <TabPanel value={value} index={0}>
-        <Grid container spacing={{ xs: 2, md: 3 }} columns={{ xs: 4, sm: 8, md: 12 }}>
+        <Grid container spacing={{ xs: 2, md: 3 }}>
           {resumeData.projects.map(project => (
-            <Grid key={project.title} item xs={12} sm={6} md={4}>
+            <Grid key={project.title} item xs={12} md={6} lg={4}>
 
               <Card sx={{ boxShadow: '0 2px 92px 0 rgba(0,0,0,0.13)', borderRadius: '6px' }} height='100%' onClick={() => setProjectDialague(project)}>
                 {/* <Card onClick={hamdleOnClick}> */}
@@ -161,12 +161,12 @@ const PortfolioPanel = () => {
       {tabsSet.map(tag => {
         return (
           <TabPanel key={tag} value={value} index={tabsSet.indexOf(tag) + 1}>
-            <Grid container spacing={{ xs: 2, md: 3 }} columns={{ xs: 4, sm: 8, md: 12 }}>
+            <Grid container spacing={{ xs: 2, md: 3 }}>
               {resumeData.projects.map(project => {
                 return (
                   <>
                     {project.tag == tag &&
-                      <Grid key={project.tag} item xs={12} sm={6} md={4}>
+                      <Grid key={project.tag} item xs={12} md={6} lg={4}>
 
                         <Card sx={{ boxShadow: '0 2px 92px 0 rgba(0,0,0,0.13)', borderRadius: '6px' }} height='100%' onClick={() => setProjectDialague(project)}>
                           {/* <Card onClick={hamdleOnClick}> */}
