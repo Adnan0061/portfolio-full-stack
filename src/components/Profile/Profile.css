@@ -1,11 +1,13 @@
 .profile_image {
-    margin-top: -10px;
+    /* margin-top: -10px;
     margin-bottom: 10px;
     -webkit-clip-path: Polygon(0 9%, 100% 0, 100% 94%, 0% 100%);
-    clip-path: Polygon(0 10%, 100% 0, 100% 88%, 0% 98%);
+    clip-path: Polygon(0 10%, 100% 0, 100% 88%, 0% 98%); */
+    display: flex;
+    justify-content: center;
 }
 .profile_image_img {
-    width: 100%
+    width: 80%
 }
 
 /* .css-11av5bn-MuiButtonBase-root-MuiButton-root:hover{

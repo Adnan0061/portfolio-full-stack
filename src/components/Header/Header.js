@@ -56,7 +56,7 @@ const Header = () => {
   return (
     <Box sx={{ width: '100%' }}>
 
-      <Box sx={{ borderBottom: 1, borderColor: 'divider',  backgroundColor: 'white', boxShadow: '0 2px 92px 0 rgba(0,0,0,0.13)', borderRadius: '6px' }}>
+      <Box sx={{ borderBottom: 1, borderColor: 'divider',  backgroundColor: 'white', boxShadow: '0 2px 92px 0 rgba(0,0,0,0.13)', borderRadius: '6px' }} >
         <Tabs TabIndicatorProps={{style: {background:'#FFC500',}}} value={value} onChange={handleChange} variant="scrollable" scrollButtons="auto" aria-label="scrollable auto tabs">
 
           <Tab sx={{backgroundColor: '#FFC500',borderTopLeftRadius: '6px' }} icon={<Home sx={{ color: 'black'}}/>} aria-label="phone" {...a11yProps(0)} />

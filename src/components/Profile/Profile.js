@@ -1,8 +1,8 @@
 import React from 'react';
 import { Box, Typography } from '@mui/material';
 // import { fontSize, fontWeight, padding } from '@mui/system';
-import myself from '../../assests/images/mine.JPG'
-// import formal from '../../assests/images/Adnan Ahmed.jpg'
+// import myself from '../../assests/images/mine.JPG'
+import formal from '../../assests/images/Adnan Ahmed.jpg'
 import './Profile.css'
 import CusstomTimeline, { CusstomTimelineItem } from '../CusstomTimeline/CusstomTimeline';
 import resumeData from '../../utils/resumeData';
@@ -56,10 +56,10 @@ const Profile = () => {
     //     link.download = `https://drive.google.com/file/d/1BkiB2Vz4gni4avlhRohOGGZIL2izm-fj/view?usp=sharing`;
     //     link.href = "https://drive.google.com/file/d/1BkiB2Vz4gni4avlhRohOGGZIL2izm-fj/view?usp=sharing";
     //     link.click();
-    //   };
+    // };
 
     return (
-        <Box sx={{ backgroundColor: 'white',  boxShadow: '0 2px 92px 0 rgba(0,0,0,0.13)', borderRadius: '5px' }}>
+        <Box sx={{ backgroundColor: 'white',  boxShadow: '0 2px 92px 0 rgba(0,0,0,0.13)', borderRadius: '10px', maxHeight: '92.5vh' }}>
             <Box sx={profile}>
                 <Box sx={profile_name}>
                     <Typography sx={profile_name_name}>{resumeData.name}</Typography>
@@ -68,10 +68,10 @@ const Profile = () => {
             </Box>
 
             <figure className='profile_image'>
-                <img className='profile_image_img' src={myself} alt='' />
+                <img className='profile_image_img' src={formal} alt='' />
             </figure>
 
-            <Box sx={{top: 0, left: 0, marginTop: '-45px', padding: '7px'}}>
+            <Box sx={{top: 0, left: 0, marginTop: '-79px', padding: '7px 7px 5px'}}>
                 <CusstomTimeline icon={<PersonOutlined />}>
                     <ProfileTimelineItem title='Name' text={resumeData.name} />
                     <ProfileTimelineItem title='Email' text={resumeData.email} />

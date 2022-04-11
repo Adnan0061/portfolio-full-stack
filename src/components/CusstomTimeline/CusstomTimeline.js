@@ -60,10 +60,10 @@ export const CusstomTimelineItem = ({children, lastConnector}) => {
     return(
         <TimelineItem sx={{minHeight: '35px',}}>
         <TimelineSeparator sx={{ pl: '18px'}}>
-            < TimelineDot sx={timeline_dot} variant="outlined" />
-            <TimelineConnector sx={{backgroundColor: '#EEEEEE', display: {lastConnector} }} />
+            <TimelineDot sx={timeline_dot} variant="outlined" />
+            <TimelineConnector sx={{backgroundColor: '#EEEEEE', height: '5px', display: {lastConnector} }} />
         </TimelineSeparator>
-        <TimelineContent sx={{ mt: '-4px', pb: 3}}>
+        <TimelineContent sx={{ mt: '-4px', pb: 2}}>
             {children}
         </TimelineContent>
         </TimelineItem>
