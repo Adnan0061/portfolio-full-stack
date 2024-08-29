@@ -8,15 +8,14 @@ import CustomTimeline, { CustomTimelineItem } from '../CustomTimeline/CustomTime
 import resumeData from '../../utils/resumeData';
 import { Download, PersonOutlined } from '@mui/icons-material';
 import CustomButton from '../Button/CustomButton';
-// import { Link } from 'react-router-dom';
-
+import { Link } from '@mui/material';
 
 const ProfileTimelineItem = ({ title, text, link }) => {
     return (
     <CustomTimelineItem>
             { link ? (
             <Typography sx={{ fontSize: '15px'}}>
-                <span style={{fontWeight: 'bold'}}>{title}: </span><a style={{textDecoration: 'none'}} href={link} target='_blank' rel='noreferrer'>{text}</a>
+                <span style={{fontWeight: 'bold'}}>{title}: </span><Link style={{textDecoration: 'none'}} href={link} target='_blank' rel='noreferrer'>{text}</Link>
             </Typography>
 
             ) : (
@@ -24,7 +23,7 @@ const ProfileTimelineItem = ({ title, text, link }) => {
                 <span style={{fontWeight: 'bold', }}>{title}: </span> {text}
             </Typography>
             )}
-    </CusstomTimelineItem>
+    </CustomTimelineItem>
     )
 }
 
