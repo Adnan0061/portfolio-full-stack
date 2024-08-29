@@ -8,7 +8,6 @@ import TimelineDot from '@mui/lab/TimelineDot';
 import './CusstomTimeline.css'
 
 const CustomTimeline = ({ title, icon, children }) => {
-
     const timeline = {
         padding: 0,
     }
@@ -27,24 +26,20 @@ const CustomTimeline = ({ title, icon, children }) => {
         mb: '50px'
     }
     
-
     return (
         <div>
             <Timeline sx={timeline}>
-
                 {/* heading item */}
                 <TimelineItem sx={timeline_firstItem}>
                     <TimelineSeparator>
-                        < TimelineDot sx={timeline_dot_header}>{icon}</TimelineDot>
+                        <TimelineDot sx={timeline_dot_header}>{icon}</TimelineDot>
                         <TimelineConnector sx={{backgroundColor: '#EEEEEE'}} />
                     </TimelineSeparator>
                     <TimelineContent sx={timeline_header} variant='h6'>
                         {title}
                     </TimelineContent>
                 </TimelineItem>
-
                 {children}
-                
             </Timeline>
         </div>
     );
@@ -57,17 +52,17 @@ export const CustomTimelineItem = ({children, lastConnector}) => {
         padding: '2px',
         marginY: '8px',
     }
-    return(
-        <TimelineItem sx={{minHeight: '35px',}}>
-        <TimelineSeparator sx={{ pl: '18px'}}>
-            <TimelineDot sx={timeline_dot} variant="outlined" />
-            <TimelineConnector sx={{backgroundColor: '#EEEEEE', height: '5px', display: {lastConnector} }} />
-        </TimelineSeparator>
-        <TimelineContent sx={{ mt: '-4px', pb: 2}}>
-            {children}
-        </TimelineContent>
+    return (
+        <TimelineItem sx={{minHeight: '35px'}}>
+            <TimelineSeparator sx={{ pl: '18px'}}>
+                <TimelineDot sx={timeline_dot} variant="outlined" />
+                <TimelineConnector sx={{backgroundColor: '#EEEEEE', height: '5px', display: lastConnector ? 'none' : 'block' }} />
+            </TimelineSeparator>
+            <TimelineContent sx={{ mt: '-4px', pb: 2}}>
+                {children}
+            </TimelineContent>
         </TimelineItem>
-)
+    )
 }
 
-export default CusstomTimeline;
+export default CustomTimeline;
