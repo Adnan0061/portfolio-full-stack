@@ -44,16 +44,35 @@ function a11yProps(index) {
   };
 }
 
+const ProjectDialogue = ({ project, open, onClose }) => (
+  <Dialog maxWidth='xl' open={open} onClose={onClose}>
+    <DialogTitle>{project.title} - {project.caption}</DialogTitle>
+    <Box sx={{ height: '75vh', width: '100%', border: '3px solid #FFC500', overflowY: 'scroll'}}>
+      <img style={{width: '100%'}} src={project.image[1]} alt="" />
+    </Box>
+    <DialogContent sx={{overflowY: 'scroll'}}>
+      <Typography>Description</Typography>
+      <ul>
+        {project.longdesc.map((list, index) => <li key={index}>{list}</li>)}
+      </ul>
+    </DialogContent>
+    <DialogActions>
+      {project?.links.map((link, index) => (
+        <Link key={index} style={{textDecoration:'none'}} href={link.link} target="_blank">
+          <CustomButton text={link.text} icon={link.icon}/>
+        </Link>
+      ))}
+    </DialogActions>
+  </Dialog>
+);
+
 const PortfolioPanel = () => {
   const [value, setValue] = useState(0);
-  const [projectDialague, setProjectDialague] = useState(false);
-  // const [open, setOpen] = React.useState(false);
+  const [projectDialogue, setProjectDialogue] = useState(null);
 
   const handleChange = (event, newValue) => {
     setValue(newValue);
   };
-
-  const ProjectDialague = (open) => (
 
     // <Dialog
     //   sx={{height: '100%'}}
@@ -155,7 +174,7 @@ const PortfolioPanel = () => {
           )}
         </Grid>
 
-        {projectDialague && <ProjectDialague />}
+        {projectDialogue && <ProjectDialogue project={projectDialogue} open={!!projectDialogue} onClose={() => setProjectDialogue(null)} />}
       </TabPanel>
 
       {tabsSet.map(tag => {

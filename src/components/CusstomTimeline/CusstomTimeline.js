@@ -7,7 +7,7 @@ import TimelineContent from '@mui/lab/TimelineContent';
 import TimelineDot from '@mui/lab/TimelineDot';
 import './CusstomTimeline.css'
 
-const CusstomTimeline = ({ title, icon, children }) => {
+const CustomTimeline = ({ title, icon, children }) => {
 
     const timeline = {
         padding: 0,
@@ -50,7 +50,7 @@ const CusstomTimeline = ({ title, icon, children }) => {
     );
 };
 
-export const CusstomTimelineItem = ({children, lastConnector}) => {
+export const CustomTimelineItem = ({children, lastConnector}) => {
     const timeline_dot = {
         color: 'black',
         borderColor: '#ffc500',

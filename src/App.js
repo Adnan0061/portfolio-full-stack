@@ -3,9 +3,6 @@ import Header from './components/Header/Header'
 import Footer from './components/Footer/Footer'
 import Profile from './components/Profile/Profile';
 import Box from '@mui/material/Box';
-// import { minHeight, shadows } from '@mui/system';
-// import { Routes, Route, Link } from "react-router-dom";
-// import './App.css';
 
 function App() {
   return (

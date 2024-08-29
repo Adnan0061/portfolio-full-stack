@@ -4,16 +4,16 @@ import { Box, Typography } from '@mui/material';
 // import myself from '../../assests/images/mine.JPG'
 import formal from '../../assests/images/Adnan Ahmed.jpg'
 import './Profile.css'
-import CusstomTimeline, { CusstomTimelineItem } from '../CusstomTimeline/CusstomTimeline';
+import CustomTimeline, { CustomTimelineItem } from '../CustomTimeline/CustomTimeline';
 import resumeData from '../../utils/resumeData';
 import { Download, PersonOutlined } from '@mui/icons-material';
 import CustomButton from '../Button/CustomButton';
 // import { Link } from 'react-router-dom';
 
 
-const ProfileTimelineItem = ({ title, text, link}) => {
-    return(
-    <CusstomTimelineItem>
+const ProfileTimelineItem = ({ title, text, link }) => {
+    return (
+    <CustomTimelineItem>
             { link ? (
             <Typography sx={{ fontSize: '15px'}}>
                 <span style={{fontWeight: 'bold'}}>{title}: </span><a style={{textDecoration: 'none'}} href={link} target='_blank' rel='noreferrer'>{text}</a>
@@ -72,7 +72,7 @@ const Profile = () => {
             </figure>
 
             <Box sx={{top: 0, left: 0, marginTop: '-79px', padding: '7px 7px 5px'}}>
-                <CusstomTimeline icon={<PersonOutlined />}>
+                <CustomTimeline icon={<PersonOutlined />}>
                     <ProfileTimelineItem title='Name' text={resumeData.name} />
                     <ProfileTimelineItem title='Email' text={resumeData.email} />
                     <ProfileTimelineItem title='LinkedIn' text={resumeData.socials.linkedin.text} link={resumeData.socials.linkedin.link} />
