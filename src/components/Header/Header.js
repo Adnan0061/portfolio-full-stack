@@ -66,7 +66,7 @@ const Header = () => {
 
           <Tab sx={{fontSize: '14px', fontWeight: '600'}}  label="Portfolio" {...a11yProps(2)} />
 
-          <Tab sx={{fontSize: '14px', fontWeight: '600'}}  label="Contact Me" {...a11yProps(3)} />
+          {/* <Tab sx={{fontSize: '14px', fontWeight: '600'}}  label="Contact Me" {...a11yProps(3)} /> */}
         </Tabs>
       </Box>
 

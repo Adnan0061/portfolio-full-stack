@@ -1,13 +1,15 @@
 .profile_image {
-    /* margin-top: -10px;
-    margin-bottom: 10px;
-    -webkit-clip-path: Polygon(0 9%, 100% 0, 100% 94%, 0% 100%);
-    clip-path: Polygon(0 10%, 100% 0, 100% 88%, 0% 98%); */
-    display: flex;
-    justify-content: center;
+    margin: 0;
+    padding: 0;
+    width: '100px';
+    height: '200px'; // Adjust this value as needed
+    overflow: 'hidden';
 }
+
 .profile_image_img {
-    width: 80%
+    width: '-webkit-fill-available';
+    height: '100%';
+    objectFit: 'cover';
 }
 
 /* .css-11av5bn-MuiButtonBase-root-MuiButton-root:hover{

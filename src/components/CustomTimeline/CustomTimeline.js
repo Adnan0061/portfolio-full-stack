@@ -1,6 +1,6 @@
 import React from 'react';
 import { Timeline, TimelineItem, TimelineSeparator, TimelineConnector, TimelineContent, TimelineDot } from '@mui/lab';
-import './CusstomTimeline.css'
+import './CustomTimeline.css'
 
 const CustomTimeline = ({ title, icon, children }) => {
     const timeline = {

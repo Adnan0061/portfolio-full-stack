@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import Box from '@mui/material/Box';
 import { Grid, Typography, Container } from '@mui/material';
 import resumeData from '../../utils/resumeData';
-import CusstomTimeline, { CusstomTimelineItem } from '../../components/CusstomTimeline/CusstomTimeline';
+import CustomTimeline, { CustomTimelineItem } from '../../components/CustomTimeline/CustomTimeline';
 import './Resume.css'
 import { School, Work } from '@mui/icons-material';
 // import CustomButton from '../../components/Button/CustomButton';
@@ -21,7 +21,7 @@ const ResumeTimelineItem = ({ title, duration, company, info }) => {
         setListInfo(info)
     },[info])
     return (
-        <CusstomTimelineItem>
+        <CustomTimelineItem>
             <Box>
                 <Box sx={{ display: 'flex', justifyContent: 'space-between', mb: 2 }}>
                     <Box sx={{ width: '50%', textAlign: 'start' }}>
@@ -43,7 +43,7 @@ const ResumeTimelineItem = ({ title, duration, company, info }) => {
                 </Box>
             </Box>
 
-        </CusstomTimelineItem>
+        </CustomTimelineItem>
     )
 }
 
@@ -70,7 +70,7 @@ const Resume = () => {
 
                     <Grid style={{ maxHeight: '500px', overflow: 'auto' }} item xs={12} sm={14} md={6}>
                         <Box sx={{ top: 0, left: 0, backgroundColor: '#D3D3D322' }}>
-                            <CusstomTimeline icon={<Work />} title='Projects'>
+                            <CustomTimeline icon={<Work />} title='Projects'>
                                 {
                                     resumeData.resumeProjects.map( data => {
                                         return(
@@ -90,7 +90,7 @@ const Resume = () => {
                                     </TimelineContent>
                                 </TimelineItem>
 
-                            </CusstomTimeline>
+                            </CustomTimeline>
                             <br />
                             {/* <Box sx={{ mb: 3, mt: -5, ml: 2 }}>
                                 <CustomButton sx={{ mb: 3 }} text={'download CV'} icon={<Download sx={{ fontSize: '1rem', pt: '2px' }} />} />
@@ -100,7 +100,7 @@ const Resume = () => {
 
                     <Grid style={{ maxHeight: '500px', overflow: 'auto' }} item xs={12} sm={14} md={6}>
                         <Box sx={{ top: 0, left: 0, backgroundColor: '#D3D3D322' }}>
-                            <CusstomTimeline icon={<School />} title='Education'>
+                            <CustomTimeline icon={<School />} title='Education'>
                             {
                                     resumeData.education.map( data => {
                                         return(
@@ -119,7 +119,7 @@ const Resume = () => {
                                     </TimelineContent>
                                 </TimelineItem>
 
-                            </CusstomTimeline>
+                            </CustomTimeline>
                             <br />
                             {/* <Box sx={{ mb: 3, mt: -5, ml: 2 }}>
                                 <CustomButton sx={{ mb: 3 }} text={'download CV'} icon={<Download sx={{ fontSize: '1rem', pt: '2px' }} />} />

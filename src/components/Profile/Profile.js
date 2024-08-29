@@ -66,17 +66,17 @@ const Profile = () => {
                 </Box>
             </Box>
 
-            <figure className='profile_image'>
-                <img className='profile_image_img' src={formal} alt='' />
-            </figure>
+            <div className='profile_image'>
+                <img className='profile_image_img' src={formal} alt='' style={{width: '100%', height: '300px', objectFit: 'cover'}} />
+            </div>
 
             <Box sx={{top: 0, left: 0, marginTop: '-79px', padding: '7px 7px 5px'}}>
                 <CustomTimeline icon={<PersonOutlined />}>
                     <ProfileTimelineItem title='Name' text={resumeData.name} />
-                    <ProfileTimelineItem title='Email' text={resumeData.email} />
+                    <ProfileTimelineItem title='Email' text={resumeData.email} link={'mailto:adnan.ahmed0061@gmail.com'} />
                     <ProfileTimelineItem title='LinkedIn' text={resumeData.socials.linkedin.text} link={resumeData.socials.linkedin.link} />
                     <ProfileTimelineItem title='GitHub' text={resumeData.socials.github.text} link={resumeData.socials.github.link} lastConnector='none' />
-                </CusstomTimeline> 
+                </CustomTimeline> 
                 <br />
                 <Box sx={{mb:3, mt: -5, ml: 2}}>
                     <a style={{textDecoration:'none'}} href="https://drive.google.com/uc?export=download&id=1BkiB2Vz4gni4avlhRohOGGZIL2izm-fj" download>
