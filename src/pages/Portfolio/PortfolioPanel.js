@@ -6,7 +6,6 @@ import Typography from '@mui/material/Typography';
 import Box from '@mui/material/Box';
 import resumeData from '../../utils/resumeData';
 import { Card, CardActionArea, CardContent, CardMedia, Dialog, DialogActions, DialogContent, DialogTitle, Grid, Link } from '@mui/material';
-import { Link as RouterLink } from 'react-router-dom';
 // import ProjectDialague from './ProjectDialague';
 // import SimpleDialogDemo from './ProjectDialague';
 import CustomButton from '../../components/Button/CustomButton';
