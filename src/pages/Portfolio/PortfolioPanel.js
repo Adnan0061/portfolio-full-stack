@@ -74,58 +74,6 @@ const PortfolioPanel = () => {
     setValue(newValue);
   };
 
-    // <Dialog
-    //   sx={{height: '100%'}}
-    //   maxWidth='xl'
-    //   open={projectDialague}
-    //   onClose={() => setProjectDialague(false)}
-    //   aria-labelledby="alert-dialog-title"
-    //   aria-describedby="alert-dialog-description"
-    // >
-    //   {/* <Grid container rowSpacing={1} columnSpacing={{ xs: 1, sm: 2, md: 3 }}>
-    //     <Grid item xs={12} sm={12} md={8}> */}
-    //       <DialogTitle onClose={() => setProjectDialague(false)}>{projectDialague.title} {projectDialague.caption}</DialogTitle>
-    //       {
-    //         projectDialague.links.map(link => <Link sx={{ ml: 3, lineHeight: '26px', fontSize: '17px', textDecoration: 'none' }} href={link.link} target='_blank'>{link.text}</Link>)
-    //       }
-    //     {/* </Grid>
-    //   </Grid> */}
-    //   <DialogContent>
-    //     {/* <Box sx={{ height: '25%' }}> */}
-    //       <Typography>
-    //         Description Details:
-    //       </Typography>
-    //       <ul>
-    //         {projectDialague.longdesc.map(list => <li key={list}>{list}</li>)}
-    //       </ul>
-    //     {/* </Box> */}
-    //     <Box sx={{ height: '75%' }}>
-    //       <img style={{ width: '100%', overflow: 'scroll' }} src={projectDialague.image[1]} alt="" />
-    //     </Box>
-    //   </DialogContent>
-    //   <DialogActions>
-    //     All actions
-    //   </DialogActions>
-    // </Dialog>
-
-    <Dialog maxWidth='xl' open={projectDialague} onClose={() => setProjectDialague(false)}>
-      <DialogTitle>{projectDialague.title} - {projectDialague.caption}</DialogTitle>
-      <Box sx={{ height: '75vh', width: '100%', border: '3px solid #FFC500', overflowY: 'scroll'}}>
-      <img style={{width: '100%'}} src={projectDialague.image[1]} alt="" />
-      </Box>
-      <DialogContent sx={{overflowY: 'scroll'}}>
-        <Typography>Desciption</Typography>
-        <ul>
-        {projectDialague.longdesc.map(list => <li key={list}>{list}</li>)}
-        </ul>
-      </DialogContent>
-      <DialogActions>
-      {projectDialague?.links.map( link => <Link key={link} style={{textDecoration:'none'}} href={link.link} target="_blank"><CustomButton text={link.text} icon={link.icon}/></Link>)}
-      </DialogActions>
-    </Dialog>
-  )
-
-
   const tabsSet = [...new Set(resumeData.projects.map(item => item.tag))]
 
   return (
