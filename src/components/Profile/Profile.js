@@ -3,7 +3,7 @@ import { Box, Typography } from '@mui/material';
 // import { fontSize, fontWeight, padding } from '@mui/system';
 // import myself from '../../assests/images/mine.JPG'
 import formal from '../../assests/images/Adnan Ahmed.jpg'
-import './Profile.css'
+// CSS import removed
 import CustomTimeline, { CustomTimelineItem } from '../CustomTimeline/CustomTimeline';
 import resumeData from '../../utils/resumeData';
 import { Download, PersonOutlined } from '@mui/icons-material';
