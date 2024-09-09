@@ -61,11 +61,11 @@ const Header = () => {
 
           <Tab sx={{backgroundColor: '#FFC500',borderTopLeftRadius: '6px' }} icon={<Home sx={{ color: 'black'}}/>} aria-label="phone" {...a11yProps(0)} />
 
-          <Tab sx={{fontSize: '14px', fontWeight: '600', }} label="Resume" {...a11yProps(1)} />
+          {/* <Tab sx={{fontSize: '14px', fontWeight: '600', }} label="Resume" {...a11yProps(1)} /> */}
 
-          <Tab sx={{fontSize: '14px', fontWeight: '600'}}  label="Portfolio" {...a11yProps(2)} />
+          <Tab sx={{fontSize: '14px', fontWeight: '600'}}  label="Portfolio" {...a11yProps(1)} />
 
-          <Tab sx={{fontSize: '14px', fontWeight: '600'}}  label="Contact Me" {...a11yProps(3)} />
+          <Tab sx={{fontSize: '14px', fontWeight: '600'}}  label="Contact Me" {...a11yProps(2)} />
         </Tabs>
       </Box>
 
