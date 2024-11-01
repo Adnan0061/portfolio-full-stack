@@ -98,7 +98,7 @@ const PortfolioPanel = () => {
           {resumeData.projects.map(project => (
             <Grid key={project.title} item xs={12} md={6} lg={4}>
 
-              <Card sx={{ boxShadow: '0 2px 92px 0 rgba(0,0,0,0.13)', borderRadius: '6px' }} height='100%' /*onClick={() => setProjectDialague(project)}*/ >
+              <Card sx={{ boxShadow: '0 2px 92px 0 rgba(0,0,0,0.13)', borderRadius: '6px' }} height='100%' onClick={() => setProjectDialogue(project)} >
                 {/* <Card onClick={hamdleOnClick}> */}
                 <CardActionArea>
                   <CardMedia
@@ -136,7 +136,7 @@ const PortfolioPanel = () => {
                     {project.tag === tag &&
                       <Grid key={project.tag} item xs={12} md={6} lg={4}>
 
-                        <Card sx={{ boxShadow: '0 2px 92px 0 rgba(0,0,0,0.13)', borderRadius: '6px' }} height='100%' /*onClick={() => setProjectDialague(project)}*/>
+                        <Card sx={{ boxShadow: '0 2px 92px 0 rgba(0,0,0,0.13)', borderRadius: '6px' }} height='100%' onClick={() => setProjectDialogue(project)}>
                           {/* <Card onClick={hamdleOnClick}> */}
                           <CardActionArea>
                             <CardMedia
